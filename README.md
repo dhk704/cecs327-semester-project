@@ -8,8 +8,8 @@ This repository holds various benchmarking tools to test the accuracy and resour
 These models can be further assessed at your convenience within Huggingface's website directory.
 
 
-##### Accuracy Benchmarking (MMLU, GSM-8K, ARC_CHALLENGE)
-To benchmark the accuracy of a LLM or SLM locally on your own machine, please follow the following commands on your Powershell directory:
+### Accuracy Benchmarking (MMLU, GSM-8K, ARC_CHALLENGE)
+To benchmark the accuracy of a LLM or SLM locally on your own machine, please follow the below instructions. These can be run from Powershell, Jupyter Notebook, or your IDE of choice:
 
 ```
 # Virtual environment setup
@@ -17,8 +17,12 @@ python3 -m venv evals
 source evals/bin/activate
 
 # Install common libraries
-pip install requests accelerate sentencepiece pytablewriter einops protobuf huggingface_hub==0.21.4
+pip install requests accelerate sentencepiece pytablewriter einops protobuf huggingface_hub==0.34
 pip install -U transformers
+
+# IMPORTANT -- to properly utilize GPU for benchmarking, compatible version of torch must be installed.
+# Check your hardware specs to see which version of CUDA is needed.
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu129
 
 # Accelerate Config
 accelerate config default
