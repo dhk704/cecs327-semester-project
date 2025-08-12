@@ -55,7 +55,7 @@ A demonstration of this benchmarking tool can be found via this link: [Evaluatin
 
 ### Evaluating Technical Performance
 Note that our project was developed and run on Windows
-machines.
+machines. Python file is saved as "Semester Project.py"
 
 1) Ensure that you have all of the requisite libraries
 and dependencies.
