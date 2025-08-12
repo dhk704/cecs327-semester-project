@@ -1,3 +1,8 @@
+# ==================================================
+# Group members: Michael Bui, Daehee Kim
+# Student IDs: 14704389, 033241115
+# Due date: 8/12/2025
+# ==================================================
 import time
 import pynvml
 import transformers
@@ -150,10 +155,10 @@ creative_writing_questions_bank = [
     "Write a creative and interesting short story about a cat and a dog going on an adventure. Keep the story within 1,800 to 2,000 characters in length."
 ]
 summarizing_questions_bank = [
-    "Summarize the Odyssey by Homer.",
-    "Summarize the following passage.\n"
+    "Summarize the Odyssey by Homer in less than 2,000 characters.",
+    "Summarize the following passage in less than 2,000 characters.\n"
     "The earliest molecular changes in Alzheimer's disease (AD) are poorly understood1-5. Here we show that endogenous lithium (Li) is dynamically regulated in the brain and contributes to cognitive preservation during ageing. Of the metals we analysed, Li was the only one that was significantly reduced in the brain in individuals with mild cognitive impairment (MCI), a precursor to AD. Li bioavailability was further reduced in AD by amyloid sequestration. We explored the role of endogenous Li in the brain by depleting it from the diet of wild-type and AD mouse models. Reducing endogenous cortical Li by approximately 50% markedly increased the deposition of amyloid-β and the accumulation of phospho-tau, and led to pro-inflammatory microglial activation, the loss of synapses, axons and myelin, and accelerated cognitive decline. These effects were mediated, at least in part, through activation of the kinase GSK3β. Single-nucleus RNA-seq showed that Li deficiency gives rise to transcriptome changes in multiple brain cell types that overlap with transcriptome changes in AD. Replacement therapy with lithium orotate, which is a Li salt with reduced amyloid binding, prevents pathological changes and memory loss in AD mouse models and ageing wild-type mice. These findings reveal physiological effects of endogenous Li in the brain and indicate that disruption of Li homeostasis may be an early event in the pathogenesis of AD. Li replacement with amyloid-evading salts is a potential approach to the prevention and treatment of AD.",
-    "Summarize the following passage.\n"
+    "Summarize the following passage in less than 2,000 characters.\n"
     "The theory of relativity usually encompasses two interrelated physics theories by Albert Einstein: special relativity and general relativity, proposed and published in 1905 and 1915, respectively. Special relativity applies to all physical phenomena in the absence of gravity. General relativity explains the law of gravitation and its relation to the forces of nature.[2] It applies to the cosmological and astrophysical realm, including astronomy. The theory transformed theoretical physics and astronomy during the 20th century, superseding a 200-year-old theory of mechanics created primarily by Isaac Newton. It introduced concepts including 4-dimensional spacetime as a unified entity of space and time, relativity of simultaneity, kinematic and gravitational time dilation, and length contraction. In the field of physics, relativity improved the science of elementary particles and their fundamental interactions, along with ushering in the nuclear age. With relativity, cosmology and astrophysics predicted extraordinary astronomical phenomena such as neutron stars, black holes, and gravitational waves."
 ]
 
@@ -262,7 +267,7 @@ if which_task == TaskChosen.CREATIVE_WRITING.value:
 else:
     filename += "_summarization"
 
-filename += "_responses_and_latencies"
+filename += "_latencies"
 
 # Whose machine used
 if whose_machine == MachineChosen.DAVID.value:
@@ -279,10 +284,11 @@ with open(filename, mode="w") as file:
     for data in time_to_complete_tasks:
         file.write(str(data) + '\n')
 
-    # Write models' responses
-    file.write("\nModel's responses:\n=============================================\n\n")
-    for response in conversation_history[1::2]:
-        file.write(str(response) + '\n')
-        file.write("\n=============================================\n\n")
+    # DEPRECATED: No longer analyzing models' responses and subjectively assessing quality of responses.
+    # # Write models' responses
+    # file.write("\nModel's responses:\n=============================================\n\n")
+    # for response in conversation_history[1::2]:
+    #     file.write(str(response) + '\n')
+    #     file.write("\n=============================================\n\n")
 
 print("\nJob's done. Goodbye.\n")

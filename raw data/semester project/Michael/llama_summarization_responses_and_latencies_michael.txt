@@ -1,0 +1,12 @@
+Time to complete tasks (in seconds):
+21.213355200000024
+83.84589020000021
+169.88783079999985
+
+Model's responses:
+=============================================
+
+{'role': 'assistant', 'content': "Here's a summary of the Odyssey by Homer in under 2,000 characters:\n\nThe Odyssey tells the story of Odysseus, a Greek hero who returns home after the Trojan War. He faces various challenges and adventures on his 10-year journey, including encounters with mythical creatures, gods, and goddesses. His wife, Penelope, waits for him patiently, fending off suitors who seek to marry her. With the help of the goddess Athena, Odysseus finally returns home, defeats the suitors, and reunites with his family."}
+
+=============================================
+
