@@ -1,0 +1,13 @@
+CECS 327 - Semester Project
+Group members: Michael Bui, Daehee Kim
+Student IDs: 14704389, 033241115
+Due date: 8/12/2025
+==================================================
+Part 1 - Evaluating Accuracy
+==================================================
+https://www.youtube.com/watch?v=RtRN_BQRaG4
+
+==================================================
+Part 2 - Evaluating Technical Performance
+==================================================
+https://www.youtube.com/watch?v=-1nIUqnzV6I
