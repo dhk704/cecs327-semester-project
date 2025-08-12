@@ -51,6 +51,8 @@ accelerate launch -m lm_eval \
 ```
 A demonstration of this benchmarking tool can be found via this link: [Evaluating Accuracy](https://www.youtube.com/watch?v=RtRN_BQRaG4)
 
+Code for displaying graph representation of benchmark results is saved as "slm_accuracy_graphs.py".
+
 ------------------------------------------------------------------------------------------------------------------------------
 
 ### Evaluating Technical Performance
